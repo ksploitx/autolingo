@@ -88,11 +88,11 @@ autolingo translate  # 30 seconds
 ```
 
 ```
-✅ l10n/en.arb   — generated
-✅ l10n/es.arb   — translated (Spanish)
-✅ l10n/hi.arb   — translated (Hindi)
-✅ l10n/fr.arb   — translated (French)
-✅ l10n/de.arb   — translated (German)
+✅ l10n/app_en.arb — generated
+✅ l10n/app_es.arb — translated (Spanish)
+✅ l10n/app_hi.arb — translated (Hindi)
+✅ l10n/app_fr.arb — translated (French)
+✅ l10n/app_de.arb — translated (German)
 ✅ Ready for flutter gen-l10n
 ```
 
@@ -131,7 +131,7 @@ set PATH=%PATH%;%APPDATA%\Pub\Cache\bin
 
 ```bash
 autolingo --version
-# autolingo 0.1.0
+# autolingo v0.1.3
 ```
 
 ---
@@ -192,12 +192,12 @@ autolingo generate
 
 ```
 Generating ARB file...
-Written: l10n/en.arb (34 strings) ✓
+Written: ./l10n/app_en.arb (34 strings) ✓
 
 Next step: autolingo translate
 ```
 
-**The generated `l10n/en.arb`:**
+**The generated `l10n/app_en.arb`:**
 
 ```json
 {
@@ -239,12 +239,12 @@ Translation complete! Check your l10n/ folder.
 
 ```
 l10n/
-  ├── en.arb   ← source (English)
-  ├── es.arb   ← Spanish
-  ├── hi.arb   ← Hindi
-  ├── fr.arb   ← French
-  ├── de.arb   ← German
-  └── pt.arb   ← Portuguese
+  ├── app_en.arb   ← source (English)
+  ├── app_es.arb   ← Spanish
+  ├── app_hi.arb   ← Hindi
+  ├── app_fr.arb   ← French
+  ├── app_de.arb   ← German
+  └── app_pt.arb   ← Portuguese
 ```
 
 ---
@@ -314,13 +314,13 @@ Text(AppLocalizations.of(context)!.uploadComplete)
 ┌─────────────────────────────────────────────────────────────┐
 │                    ARB Generator                            │
 │  Converts strings → camelCase keys                          │
-│  Writes valid l10n/en.arb (Flutter standard format)         │
+│  Writes valid l10n/app_en.arb (Flutter standard format)     │
 └──────────────────────┬──────────────────────────────────────┘
                        │  autolingo translate
                        ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                 Lingo.dev AI Translation                    │
-│  Reads en.arb → translates to es, hi, fr, de, pt            │
+│  Reads app_en.arb → translates to es, hi, fr, de, pt        │
 │  Writes one ARB file per language                           │
 └──────────────────────┬──────────────────────────────────────┘
                        │  flutter gen-l10n
@@ -358,17 +358,17 @@ Text("12345")              // numbers
 ## 📖 CLI Reference
 
 ```
-autolingo <command>
+autolingo <command> [options]
 
 Commands:
-  init        Create l10n.yaml and i18n.json config files
-  scan        Dry run — list all detected UI strings
-  generate    Write l10n/en.arb from scanned strings
-  translate   Run Lingo.dev to produce translated ARB files
+  init        Scaffold l10n/ directory and config files
+  scan        Scan ./lib for UI strings and preview them
+  generate    Extract UI strings and write l10n/app_en.arb
+  translate   Push app_en.arb to Lingo.dev for AI translation
 
 Options:
-  --version   Print version number
-  --help      Show help
+  -v, --version   Print the current version
+  -h, --help      Show this help message
 ```
 
 ### Full one-liner

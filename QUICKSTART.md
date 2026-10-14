@@ -42,12 +42,12 @@ AutoLingo scans every `.dart` file in your Flutter project, finds all UI strings
 ```
 Flutter App (.dart files)
         ↓  autolingo scan + generate
-  l10n/en.arb  (source — English)
+  l10n/app_en.arb  (source — English)
         ↓  autolingo translate
-  l10n/es.arb  (Spanish)
-  l10n/hi.arb  (Hindi)
-  l10n/fr.arb  (French)
-  l10n/de.arb  (German)
+  l10n/app_es.arb  (Spanish)
+  l10n/app_hi.arb  (Hindi)
+  l10n/app_fr.arb  (French)
+  l10n/app_de.arb  (German)
         ↓  flutter gen-l10n
   AppLocalizations  (ready to use)
 ```
@@ -104,9 +104,16 @@ helperText: "Required field"
 Edit `i18n.json` to add/remove target languages:
 ```json
 {
+  "$schema": "https://lingo.dev/schema/i18n.json",
+  "version": "1.15",
   "locale": {
     "source": "en",
     "targets": ["es", "hi", "fr", "de", "pt", "ja", "ko"]
+  },
+  "buckets": {
+    "flutter": {
+      "include": ["l10n/app_[locale].arb"]
+    }
   }
 }
 ```
@@ -118,7 +125,7 @@ autolingo/
 ├── bin/autolingo.dart       ← CLI entry (4 commands)
 └── lib/src/
     ├── extractor.dart       ← regex string scanner
-    ├── arb_generator.dart   ← writes en.arb
+    ├── arb_generator.dart   ← writes app_en.arb
     ├── lingo_runner.dart    ← calls npx lingo.dev run
     └── init_command.dart    ← scaffolds config files
 ```

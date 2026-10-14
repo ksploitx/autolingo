@@ -41,12 +41,12 @@ AutoLingo — string scanner
 Scanning ./lib...
 Found 34 UI strings ✓
 
-Generating l10n/en.arb... ✓
+Generating l10n/app_en.arb... ✓
 Running Lingo.dev translation...
-✔ Translated to Spanish  →  l10n/es.arb
-✔ Translated to Hindi    →  l10n/hi.arb
-✔ Translated to French   →  l10n/fr.arb
-✔ Translated to German   →  l10n/de.arb
+✔ Translated to Spanish  →  l10n/app_es.arb
+✔ Translated to Hindi    →  l10n/app_hi.arb
+✔ Translated to French   →  l10n/app_fr.arb
+✔ Translated to German   →  l10n/app_de.arb
 
 Translation complete in 28 seconds.
 ```
@@ -76,7 +76,7 @@ Translation complete in 28 seconds.
 ┌──────────────────────────────────────────────────────┐
 │              ARB File Generator                      │
 │   "Upload Complete" → uploadComplete                 │
-│   Writes valid l10n/en.arb (Flutter standard)        │
+│   Writes valid l10n/app_en.arb (Flutter standard)    │
 └──────────────────┬───────────────────────────────────┘
                    │
          autolingo translate
@@ -84,7 +84,7 @@ Translation complete in 28 seconds.
                    ▼
 ┌──────────────────────────────────────────────────────┐
 │           Lingo.dev AI Translation Layer             │
-│   en.arb → es.arb, hi.arb, fr.arb, de.arb ...       │
+│   app_en.arb → app_es.arb, app_hi.arb, ...           │
 │   AI-powered · Translation memory · Brand voice      │
 └──────────────────┬───────────────────────────────────┘
                    │
@@ -111,7 +111,7 @@ dart pub global activate autolingo
 # Inside any Flutter project
 autolingo init       # creates l10n.yaml + i18n.json
 autolingo scan       # preview what strings will be extracted
-autolingo generate   # writes l10n/en.arb
+autolingo generate   # writes l10n/app_en.arb
 autolingo translate  # calls Lingo.dev, writes translated ARBs
 ```
 
@@ -170,7 +170,7 @@ cd autolingo
 dart pub get
 
 # Test against any Flutter project
-dart run bin/autolingo.dart scan --dir path/to/flutter/app
+dart run bin/autolingo.dart scan  # test against any Flutter project
 ```
 
 The codebase is tiny and intentionally readable. `extractor.dart` is the interesting bit.
