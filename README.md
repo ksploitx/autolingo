@@ -16,7 +16,6 @@
 [![pub package](https://img.shields.io/pub/v/autolingo?style=flat-square&logo=dart&color=00B4AB)](https://pub.dev/packages/autolingo)
 [![Lingo.dev](https://img.shields.io/badge/Powered%20by-Lingo.dev-6C47FF?style=flat-square)](https://lingo.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Built at Hackathon](https://img.shields.io/badge/Built%20at-Hackathon%202026-FF6B6B?style=flat-square)](#)
 
 <br/>
 
@@ -498,8 +497,6 @@ MIT — see [LICENSE](LICENSE)
 ---
 
 <div align="center">
-
-Built with ❤️ at **Hackathon 2026**
 
 Powered by [Lingo.dev](https://lingo.dev) — open-source AI-powered i18n
 
