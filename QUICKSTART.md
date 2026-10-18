@@ -141,6 +141,6 @@ autolingo/
 
 <div align="center">
 
-Built at **Hackathon 2026** · [📦 pub.dev](https://pub.dev/packages/autolingo) · [Lingo.dev](https://lingo.dev) · MIT License
+[📦 pub.dev](https://pub.dev/packages/autolingo) · [Lingo.dev](https://lingo.dev) · MIT License
 
 </div>
